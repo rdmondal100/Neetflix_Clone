@@ -1,0 +1,255 @@
+
+
+:root {
+    --main-color: #141414;
+    --secondary-color: #ff0000;
+    --white-color: #ffffff;
+    --gray-color: #808080;
+  }
+
+
+html,body{
+    background-color: var(--main-color) ;
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica,Arial,sans-serif;
+}
+
+
+/* Header */
+header{
+    background-color:transparent ;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: all 1s ease-in-out ;
+    padding-bottom: 1rem;
+   
+
+}
+
+nav{
+    /* position: fixed; */
+}
+
+/* container */
+.container{
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+ 
+
+}
+
+
+.left-con{
+    display: flex;
+    position: relative;
+    top: 1rem;
+    left: -7rem;
+}
+.right-con{
+    position: absolute;
+    right: 2rem;
+    top: 32px;
+   
+}
+
+
+.brand-logo{
+    max-width: 100px;
+    position: relative;
+    left: 1rem;
+}
+
+
+.nav-item{
+    color:var(--white-color) ;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+.icons{
+    display: flex;
+    color: var(--white-color);
+    gap:20px;
+    font-weight: 700;
+}
+.icons i{
+    cursor: pointer;
+}
+
+
+.main-nav{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+header.black-bg{
+    background-color: rgb(20,20,20);
+    opacity: 1;
+}
+
+/* Movies section */
+.movies-con{
+    margin-left: 2rem;
+}
+/* .movies-section{
+    margin-left: 2rem;
+} */
+
+.movies-section-heading{
+    color: var(--white-color);
+    font-size: 1.5rem;
+    line-height: 1.2;
+    cursor: pointer;
+    margin-bottom: 10px;
+    max-width: 20%;
+}
+
+.explore{
+    color: aqua;
+    font-size: .8rem;
+    display: none;
+
+}
+
+.movies-section-heading:hover .explore{
+    display: inline-block;
+}
+
+.movies-row{
+    display: flex;
+    gap: 1rem;
+    /* flex-wrap: nowrap; */
+    overflow-x: scroll;
+   
+
+}
+.movie-item-img{
+    width: inherit;
+
+}
+.movie-item iframe{
+    position: absolute;
+    margin: 0 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: none;
+    border: none;
+    outline: none;
+
+}
+/* .movie-item:hover iframe{
+ display: block;
+ transform:  translateY(-20%) scale(1.1);
+ transition: transform ease-in 400ms;
+ border-radius: 9px;
+ width: 350px;
+ height: 200px;
+ border-radius: 8px!important;
+ z-index: 10;
+
+
+} */
+.movie-item{
+    width: 350px;
+    height: 180px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    object-fit: cover;
+    position: relative;
+}
+
+*::-webkit-scrollbar{
+    display: none;
+}
+
+.movie-item:hover{  
+    transform:  translateY(-0%) scale(1.1);
+    transition: transform ease-in-out 400ms;
+    border-radius: 9px;
+    width: 350px;
+    height: 200px;
+    position: absolute;
+    border-radius: 8px!important;
+    z-index: 10;
+}
+
+
+/* banner section */
+.banner-section{
+   
+    background-repeat: no-repeat;
+    max-width: 100%;
+    min-height: 90vh;
+    background-size: cover;
+    position: relative;
+}
+
+.banner-content{
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+    margin-left: 4rem;
+    padding-top: 3rem;
+}
+.banner_title{
+    color: var(--white-color);
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+.banner_info{
+    margin-bottom: 14px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--white-color);
+
+}
+
+.banner_overview{
+    font-size: 16.4px;
+    color: var(--white-color);
+    line-height: 1.33;
+
+}
+
+.action-buttons-con{
+ margin-top: 3rem;
+
+}
+.action-button:last-child{
+    background-color: rgb(80, 79, 79);
+
+}
+.action-button{
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    height: 34px;
+    margin: 0 8px;
+    /* width: 100px; */
+    margin: 0 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.action-button i{
+    margin: 0 5px;
+
+}
+
+.banner_fadeBottom{
+    height: 80px;   
+    background: linear-gradient(180deg, transparent,#141414),transparent;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
